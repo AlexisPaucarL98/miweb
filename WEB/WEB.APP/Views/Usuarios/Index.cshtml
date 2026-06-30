@@ -1,0 +1,37 @@
+﻿@{
+    @model List<WEB.APP.Models.UsuarioViewModel>
+}
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<h2>Listado de Usuarios</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>N° Documento</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdUsuario</td>
+                <td>@item.NumeroDocUsuario</td>
+                <td>@item.Nombres</td>
+                <td>@item.Apellidos</td>
+                <td>@item.Telefono</td>
+                <td>@item.Correo</td>
+      
+            </tr>
+        }
+
+    </tbody>
+</table>
