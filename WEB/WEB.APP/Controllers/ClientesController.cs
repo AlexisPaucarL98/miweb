@@ -40,6 +40,11 @@ namespace WEB.APP.Controllers
 
             return View(clientes);
         }
+
+        public async Task<IActionResult> RegistrarCleinte()
+        {
+            return View("Index");
+        }
     }
 
         
